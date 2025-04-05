@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan Your Trip – Taniti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Taniti</div>
+      <ul class="nav-bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="plan.html">Plan Your Trip</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content-container">
+    <h1>Plan Your Trip</h1>
+    <p style="text-align:center; max-width: 700px; margin: auto;">
+      Get ready for an unforgettable island experience. Whether you're coming to relax, explore, or celebrate,
+      Taniti has something for everyone. Start planning your journey below.
+    </p>
+
+    <!-- Planning Form -->
+    <section class="plan-form-section">
+      <form class="plan-form">
+        <label for="dates">Travel Dates:</label>
+        <input type="text" id="dates" placeholder="e.g., June 10 – June 17" />
+
+        <label for="group">Number of Travelers:</label>
+        <input type="number" id="group" placeholder="e.g., 2" />
+
+        <label for="lodging">Lodging Type:</label>
+        <select id="lodging">
+          <option>Hotel</option>
+          <option>Bed & Breakfast</option>
+          <option>Resort</option>
+          <option>Hostel</option>
+        </select>
+
+        <label for="activities">Preferred Activities:</label>
+        <input type="text" id="activities" placeholder="e.g., Snorkeling, Museums" />
+
+        <button type="submit">Get Suggestions</button>
+      </form>
+    </section>
+
+    <!-- Info Tips Section -->
+    <section class="trip-tips">
+      <h2>Travel Tips</h2>
+      <div class="tip-grid">
+        <div class="tip-box">
+          <h3>Getting Here</h3>
+          <p>Fly into Taniti’s small airport or arrive via cruise. The airport is expanding to allow larger jets soon.</p>
+        </div>
+        <div class="tip-box">
+          <h3>Getting Around</h3>
+          <p>Public buses serve Taniti City. Private buses, taxis, and bike rentals are also available across the island.</p>
+        </div>
+        <div class="tip-box">
+          <h3>Currency & Payment</h3>
+          <p>Taniti uses the U.S. Dollar, but euros and yen are often accepted. Most places take credit cards.</p>
+        </div>
+        <div class="tip-box">
+          <h3>Health & Safety</h3>
+          <p>Taniti is safe and has one hospital plus several clinics. English is spoken in most tourist areas.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Taniti | Privacy Policy | Terms of Use</p>
+  </footer>
+
+</body>
+</html>
