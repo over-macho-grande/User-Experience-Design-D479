@@ -32,27 +32,31 @@
 
     <!-- Planning Form -->
     <section class="plan-form-section">
-      <form class="plan-form">
+      <form class="plan-form" onsubmit="handlePlanForm(event)">
         <label for="dates">Travel Dates:</label>
-        <input type="text" id="dates" placeholder="e.g., June 10 – June 17" />
-
+        <input type="text" id="dates" placeholder="e.g., June 10 – June 17" required />
+    
         <label for="group">Number of Travelers:</label>
-        <input type="number" id="group" placeholder="e.g., 2" />
-
+        <input type="number" id="group" placeholder="e.g., 2" required min="1" />
+    
         <label for="lodging">Lodging Type:</label>
-        <select id="lodging">
+        <select id="lodging" required>
+          <option value="">-- Select --</option>
           <option>Hotel</option>
           <option>Bed & Breakfast</option>
           <option>Resort</option>
           <option>Hostel</option>
         </select>
-
+    
         <label for="activities">Preferred Activities:</label>
         <input type="text" id="activities" placeholder="e.g., Snorkeling, Museums" />
-
+    
         <button type="submit">Get Suggestions</button>
+    
+        <p id="form-success" class="confirmation-message" style="display: none;">Form submitted successfully!</p>
       </form>
     </section>
+    
 
     <!-- Info Tips Section -->
     <section class="trip-tips">
@@ -82,6 +86,21 @@
   <footer>
     <p>© 2025 Taniti | Privacy Policy | Terms of Use</p>
   </footer>
-
+  <script>
+    function handlePlanForm(event) {
+      event.preventDefault();
+  
+      const groupInput = document.getElementById("group");
+      const successMessage = document.getElementById("form-success");
+  
+      if (parseInt(groupInput.value) <= 0 || isNaN(parseInt(groupInput.value))) {
+        alert("Please enter a valid number of travelers.");
+        return;
+      }
+  
+      successMessage.style.display = "block";
+    }
+  </script>
+  
 </body>
 </html>
